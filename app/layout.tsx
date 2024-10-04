@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Nunito } from "next/font/google";
+import Header from "./shared/Header";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -22,7 +23,10 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={`${nunito.variable} ${nunito.variable} antialiased`}>
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen">
+          <Header />
+          {children}
+          </main>
       </body>
     </html>
   );
