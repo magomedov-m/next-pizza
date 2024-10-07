@@ -16,7 +16,7 @@ const TopBar: React.FC<Props> = ({ className }) => {
         className
       )}
     >
-      <Container className={cn('sticky top-0 bg-white py-5 shadow-lg shadow-black/5 z-10', className)}>
+      <Container className={cn('flex items-center justify-between', className)}>
         <Categories />
         <SortPopup />
       </Container>
