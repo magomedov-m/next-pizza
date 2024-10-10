@@ -25,7 +25,7 @@ const Categories: React.FC<Props> = ({ className }) => {
         {cats.map(({name, id}, index) => (
             <a className={cn(
                 'flex items-center font-bold h-11 rounded-2xl px-5', categoryActiveId === id && 'bg-white shadow-md shadow-gray-200 text-primary'
-            )} key={index}>
+            )} href={`/#${name}`} key={index}>
                 <button>
                     {name}
                 </button>
