@@ -13,12 +13,12 @@ model User {
   fullName         String
   email            String            @unique
   password         String
+  role             UserRole          @default(USER)
+  provider         String?
+  providerId       String?
   verified DateTime
   createdAt        DateTime          @default(now())
   updateAt         DateTime          @updatedAt
-  provider         String?
-  providerId       String?
-  role             UserRole          @default(USER)
   cart             Cart?
   orders           Order[]
   verificationCode VerificationCode?
