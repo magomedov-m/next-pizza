@@ -44,9 +44,13 @@ async function up() {
     ],
   });
 
+  await prisma.category.createMany({
+    data: categories,
+    skipDuplicates: true
+  });
+
   await prisma.ingredient.createMany({
     data: ingredients,
-    skipDuplicates: true
   });
 
   await prisma.product.createMany({
@@ -59,7 +63,7 @@ async function up() {
       imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF61FBB31CB08D95A03574FE87A3B0.avif',
       categoryId: 1,
       ingretients: {
-        connect: ingredients.slice(0, 5)
+        connect: ingredients.slice(0, 5),
       }
     }
   });
