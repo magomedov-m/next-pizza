@@ -1,22 +1,29 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useClickAway } from "react-use";
 import Link from "next/link";
+import { Api } from "@/sevices/api-client";
 
 interface Props {
   className?: string;
 }
 
 const SearchInputField: React.FC<Props> = ({ className }) => {
+  const [searchQuery, setSearchQuery] = useState('');
   const [focused, setFocused] = useState(false);
   const ref = useRef(null);
 
   useClickAway(ref, () => {
     setFocused(false);
+  });
+
+  useEffect(() => {
+    Api.products.search('')
   })
+
   return (
     <>
       {focused && <div className="fixed top-0 left-0 bottom-0 right-0 bg-black/50 z-30"></div>}
