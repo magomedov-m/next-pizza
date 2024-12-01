@@ -18,6 +18,7 @@ interface Props {
   defaultValue?: string[];
   selectedIds?: Set<string>;
   className?: string;
+  name?: string;
 }
 
 const CheckboxFiltersGroup: React.FC<Props> = ({
@@ -30,6 +31,7 @@ const CheckboxFiltersGroup: React.FC<Props> = ({
   loading,
   onClickCheckBox,
   selectedIds,
+  name,
   defaultValue,
 }) => {
   const [showAll, setShowAll] = useState(false);
@@ -75,6 +77,7 @@ const CheckboxFiltersGroup: React.FC<Props> = ({
             endAdornment={item.endAdornment}
             checked={selectedIds?.has(item.value)}
             onCheckedChange={() => onClickCheckBox?.(item.value)}
+            name={name}
           />
         ))}
       </div>
