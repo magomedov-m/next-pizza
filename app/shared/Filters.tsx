@@ -33,11 +33,11 @@ export const Filters: React.FC<Props> = ({ className }) => {
   const { ingredients, loading, onAddId, selectedIngredients } =
     useFilterIngredients();
 
-  console.log(searchParams.get('sizes'))
+  // console.log(searchParams.get('sizes'))
 
   const [sizes, { toggle: toggleSizes }] = useSet(new Set<string>(searchParams.has('sizes') ? searchParams.get('sizes')?.split(',') : []));
   const [pizzaTypes, { toggle: togglePizzatypes }] = useSet(
-    new Set<string>([])
+    new Set<string>(searchParams.has('pizzaTypes') ? searchParams.get('pizzaTypes')?.split(',') : [])
   );
 
   const [prices, setPrice] = useState<PriceProps>({
@@ -57,6 +57,9 @@ export const Filters: React.FC<Props> = ({ className }) => {
     });
   };
 
+
+  console.log(searchParams, 999)
+
   useEffect(() => {
     const filters = {
       ...prices,
@@ -69,8 +72,10 @@ export const Filters: React.FC<Props> = ({ className }) => {
       arrayFormat: 'comma'
     });
 
-    router.push(`?${query}`)
-  }, [prices, pizzaTypes, sizes, selectedIngredients]);
+    router.push(`?${query}`, {
+      scroll: false,
+    })
+  }, [prices, pizzaTypes, sizes, selectedIngredients, router]);
 
   return (
     <div className={className}>
