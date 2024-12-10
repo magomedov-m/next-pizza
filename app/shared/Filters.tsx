@@ -2,80 +2,25 @@
 
 import React, { useEffect, useState } from "react";
 import { Title } from "./Title";
-import { FilterCheckbox } from "./FilterCheckbox";
 import { Input } from "@/components/ui/input";
 import { RangeSlider } from "./RangeSlider";
-import { useSet } from "react-use";
 import CheckboxFiltersGroup from "./CheckboxFiltersGroup";
-import { useFilterIngredients } from "@/hooks/useFilterIngredients";
-import qs from 'qs';
-import { useRouter, useSearchParams } from "next/navigation";
+import qs from "qs";
+import { useRouter } from "next/navigation";
+import { useIngredients } from "@/hooks/useIngredients";
+import { useFilters } from "@/hooks/useFilters";
+import router from "next/router";
 
 interface Props {
   className?: string;
 }
 
-interface PriceProps {
-  priceFrom: number | undefined;
-  priceTo: number | undefined;
-}
-
-interface QueryFilters extends PriceProps {
-  pizzaTypes: string;
-  sizes: string;
-  ingredients: string;
-}
-
 export const Filters: React.FC<Props> = ({ className }) => {
-  const searchParams = useSearchParams() as unknown as Map<keyof QueryFilters, string>;
+  const router = useRouter();
+  const {ingredients, loading} = useIngredients();
+  const filters = useFilters()
 
-  const router = useRouter()
-  const { ingredients, loading, onAddId, selectedIngredients } =
-    useFilterIngredients(searchParams.get('ingredients') ? searchParams.get('ingredients')?.split(',') : []);
-
-  // console.log(searchParams.get('sizes'))
-
-  const [sizes, { toggle: toggleSizes }] = useSet(new Set<string>(searchParams.has('sizes') ? searchParams.get('sizes')?.split(',') : []));
-  const [pizzaTypes, { toggle: togglePizzatypes }] = useSet(
-    new Set<string>(searchParams.has('pizzaTypes') ? searchParams.get('pizzaTypes')?.split(',') : [])
-  );
-
-  const [prices, setPrice] = useState<PriceProps>({
-    priceFrom: Number(searchParams.get('priceFrom')) || undefined,
-    priceTo: Number(searchParams.get('priceTo')) || undefined,
-  });
-
-  const items = ingredients.map((item) => ({
-    value: String(item.id),
-    text: item.name,
-  }));
-
-  const updatePrice = (name: keyof PriceProps, value: number) => {
-    setPrice({
-      ...prices,
-      [name]: value,
-    });
-  };
-
-
-  console.log(searchParams, 999)
-
-  useEffect(() => {
-    const filters = {
-      ...prices,
-      pizzaTypes: Array.from(pizzaTypes),
-      sizes: Array.from(sizes),
-      ingredients: Array.from(selectedIngredients),
-    };
-
-    const query = qs.stringify(filters, {
-      arrayFormat: 'comma'
-    });
-
-    router.push(`?${query}`, {
-      scroll: false,
-    })
-  }, [prices, pizzaTypes, sizes, selectedIngredients, router]);
+  
 
   return (
     <div className={className}>
