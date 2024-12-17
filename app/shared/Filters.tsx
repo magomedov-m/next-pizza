@@ -19,8 +19,9 @@ export const Filters: React.FC<Props> = ({ className }) => {
 
   const items = ingredients.map((item) => ({ value: String(item.id), text: item.name }));
 
-  const updatePrices = (prices: [number, number]) => {
-    filters.setPrices({priceFrom, priceTo})
+  const updatePrices = (prices: number[]) => {
+    filters.setPrices('priceFrom', prices[0])
+    filters.setPrices('priceTo', prices[1])
   }
 
   function updatePrice(arg0: string, arg1: number): void {
@@ -85,9 +86,7 @@ export const Filters: React.FC<Props> = ({ className }) => {
           max={1000}
           step={10}
           value={[filters.prices.priceFrom || 0, filters.prices.priceTo || 1000]}
-          onValueChange={([priceFrom, priceTo]) =>
-            setPrice({ priceFrom, priceTo })
-          }
+          onValueChange={updatePrices}
         />
       </div>
 
@@ -99,8 +98,8 @@ export const Filters: React.FC<Props> = ({ className }) => {
         defaultItems={items.slice(0, 6)}
         items={items}
         loading={loading}
-        onClickCheckBox={onAddId}
-        selected={selectedIngredients}
+        onClickCheckBox={filters.setSelectedIngredients}
+        selected={filters.selectedIngredients}
       />
     </div>
   );
