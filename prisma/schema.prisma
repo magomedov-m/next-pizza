@@ -41,7 +41,7 @@ model Product {
   categoryId  Int
   category    Category      @relation(fields: [categoryId], references: [id])
   items       ProductItem[]
-  ingretients Ingredient[]  @relation("IngredientToProduct")
+  ingredients Ingredient[]  @relation("IngredientToProduct")
 }
 
 model ProductItem {

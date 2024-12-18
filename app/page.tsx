@@ -4,8 +4,19 @@ import "./globals.css";
 import TopBar from "./shared/TopBar";
 import Filters from "./shared/Filters";
 import ProductsGroupList from "./shared/ProductsGroupList";
+import { prisma } from "@/prisma/prismaClient";
 
-export default function Home() {
+export default async function Home() {
+  const categories = await prisma.category.findMany({
+    include: {
+      products: {
+        include: {
+          ingredients: true,
+          items: true,
+        }
+      }
+    }
+  })
   return (
     <>
       <Container className="mt-10">

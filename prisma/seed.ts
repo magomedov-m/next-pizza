@@ -62,7 +62,7 @@ async function up() {
       name: 'Пепперони фреш',
       imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF61FBB31CB08D95A03574FE87A3B0.avif',
       categoryId: 1,
-      ingretients: {
+      ingredients: {
         connect: ingredients.slice(0, 5),
       }
     }
@@ -73,7 +73,7 @@ async function up() {
       name: 'Сырная',
       imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D610CF7E265B7C72BE5AE757CA7.avif',
       categoryId: 1,
-      ingretients: {
+      ingredients: {
         connect: ingredients.slice(5, 10)
       }
     }
@@ -84,7 +84,7 @@ async function up() {
       name: 'Чоризо фреш',
       imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF6138F5E8A0DAA9AB649DFBF29CE7.avif',
       categoryId: 1,
-      ingretients: {
+      ingredients: {
         connect: ingredients.slice(10, 40)
       }
     }
