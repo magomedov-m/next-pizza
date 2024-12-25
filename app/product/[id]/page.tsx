@@ -49,7 +49,6 @@ export default async function ProductPage({
               {
                 name: "Большая",
                 value: '3',
-                desabled: true
               },
               
             ]}
