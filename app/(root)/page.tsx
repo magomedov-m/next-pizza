@@ -1,9 +1,9 @@
-import { Container } from "./shared/Container";
-import { Title } from "./shared/Title";
-import "./globals.css";
-import TopBar from "./shared/TopBar";
-import Filters from "./shared/Filters";
-import ProductsGroupList from "./shared/ProductsGroupList";
+import { Container } from "../shared/Container";
+import { Title } from "../shared/Title";
+import "../globals.css";
+import TopBar from "../shared/TopBar";
+import Filters from "../shared/Filters";
+import ProductsGroupList from "../shared/ProductsGroupList";
 import { prisma } from "@/prisma/prismaClient";
 
 export default async function Home() {
