@@ -6,7 +6,7 @@ export const meatedata = {
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            Dashboard lkjg
+            Dashboard Header
             <body>{children}</body>
         </html>
     )

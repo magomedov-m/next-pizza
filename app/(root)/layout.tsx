@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
 import Header from "../shared/Header";
+import '../globals.css'
 
 export const metadata: Metadata = {
   title: "Next Pizza | Главная",
 };
 
-export default function RootLayout({
+export default function HomeLayout({
   children,
-  modal,
+  modal
 }: Readonly<{
   children: React.ReactNode;
   modal: React.ReactNode;
 }>) {
   return (
-    <html>
+    <html lang="en">
       <body>
         <main className="min-h-screen">
           <Header />
