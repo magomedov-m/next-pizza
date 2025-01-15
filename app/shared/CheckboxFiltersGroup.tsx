@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { FilterChecboxProps, FilterCheckbox } from "./FilterCheckbox";
+import { FilterCheckboxProps, FilterCheckbox } from "./FilterCheckbox";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 
-type Item = FilterChecboxProps;
+type Item = FilterCheckboxProps;
 
 interface Props {
   title: string;

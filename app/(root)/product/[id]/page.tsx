@@ -1,7 +1,7 @@
 import { prisma } from "@/prisma/prismaClient";
 import { notFound } from "next/navigation";
 import { Container } from "@/app/shared/Container";
-import { ProductImage } from "@/components/ui/ProductImage";
+import { ProductImage } from "@/components/ui/PizzaImage";
 import { Title } from "@/app/shared/Title";
 import GroupVariants from "@/app/shared/GroupVariants";
 
@@ -36,21 +36,20 @@ export default async function ProductPage({
           </p>
 
           <GroupVariants
-          selectedValue="2"
+            selectedValue="2"
             items={[
               {
                 name: "Маленькая",
-                value: '1',
+                value: "1",
               },
               {
                 name: "Средняя",
-                value: '2',
+                value: "2",
               },
               {
                 name: "Большая",
-                value: '3',
+                value: "3",
               },
-              
             ]}
           />
         </div>
