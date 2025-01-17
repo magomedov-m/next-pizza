@@ -1,5 +1,5 @@
 import { PizzaImage } from "@/components/ui/PizzaImage";
-import { cn } from "@/lib/utils";
+import { cn } from "@/shared/lib/utils";
 import { ingredients } from "@/prisma/constants";
 import React from "react";
 import { Title } from "./Title";

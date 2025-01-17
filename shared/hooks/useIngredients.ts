@@ -1,4 +1,4 @@
-import { Api } from "@/sevices/api-client";
+import { Api } from "@/shared/sevices/api-client";
 import { Ingredient } from "@prisma/client";
 import { useEffect, useState } from "react";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { cn } from "@/lib/utils";
+import { cn } from "@/shared/lib/utils";
 import { Product } from "@prisma/client";
 import React from "react";
 import { Title } from "../Title";
@@ -26,12 +26,13 @@ const ChooseProductModal: React.FC<Props> = ({ product, className }) => {
         )}
       >
         {isPizzaForm ? (
-          <ChoosePizzaForm imageUrl={product.imageUrl} name={product.name} ingredients={[]} />
-        ) : (
-          <ChooseProductForm
+          <ChoosePizzaForm
             imageUrl={product.imageUrl}
             name={product.name}
+            ingredients={[]}
           />
+        ) : (
+          <ChooseProductForm imageUrl={product.imageUrl} name={product.name} />
         )}
       </DialogContent>
     </Dialog>

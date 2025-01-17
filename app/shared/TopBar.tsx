@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/shared/lib/utils";
 import Categories from "./Categories";
 import { Container } from "./Container";
 import SortPopup from "./SortPopup";
@@ -19,7 +19,7 @@ const TopBar: React.FC<Props> = ({ categories, className }) => {
         className
       )}
     >
-      <Container className={cn('flex items-center justify-between', className)}>
+      <Container className={cn("flex items-center justify-between", className)}>
         <Categories items={categories} />
         <SortPopup />
       </Container>

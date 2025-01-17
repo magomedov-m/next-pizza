@@ -1,5 +1,5 @@
 import { PizzaImage } from "@/components/ui/PizzaImage";
-import { cn } from "@/lib/utils";
+import { cn } from "@/shared/lib/utils";
 import { ingredients } from "@/prisma/constants";
 import React from "react";
 import { Title } from "./Title";
@@ -14,7 +14,7 @@ interface Props {
   className?: string;
 }
 
-const choosePizzaForm: React.FC<Props> = ({
+const ChoosePizzaForm: React.FC<Props> = ({
   name,
   items,
   imageUrl,
@@ -42,4 +42,4 @@ const choosePizzaForm: React.FC<Props> = ({
   );
 };
 
-export default choosePizzaForm;
+export default ChoosePizzaForm;

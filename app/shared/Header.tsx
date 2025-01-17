@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/shared/lib/utils";
 import { Container } from "./Container";
 import Image from "next/image";
 import { Button } from "../../components/ui/Index";
@@ -17,7 +17,7 @@ const Header: React.FC<Props> = ({ className }) => {
       <div>
         <Container className="flex items-center justify-between py-8">
           {/* Левая часть */}
-          <Link href='/'>
+          <Link href="/">
             <div className="flex items-center gap-4">
               <Image src="/logo.png" alt="Logo" width={35} height={35} />
               <div>
