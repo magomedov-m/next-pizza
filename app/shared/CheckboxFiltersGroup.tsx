@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import { FilterCheckboxProps, FilterCheckbox } from "./FilterCheckbox";
-import { Input } from "@/components/ui/input";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Input } from "@/shared/components/ui/input";
+import { Skeleton } from "@/shared/components/ui/skeleton";
 
 type Item = FilterCheckboxProps;
 
@@ -35,24 +35,30 @@ const CheckboxFiltersGroup: React.FC<Props> = ({
   defaultValue,
 }) => {
   const [showAll, setShowAll] = useState(false);
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
 
-  const list = showAll ? items.filter((item) => item.text.toLowerCase().includes(searchValue.toLowerCase())) : (defaultItems || items).slice(0, limit);
+  const list = showAll
+    ? items.filter((item) =>
+        item.text.toLowerCase().includes(searchValue.toLowerCase())
+      )
+    : (defaultItems || items).slice(0, limit);
 
   const onChangeSearchInput = (value: string) => {
     setSearchValue(value);
-  }
+  };
 
   if (loading) {
-    return <div className={className}>
-      <p className="font-bold mb-3">{title}</p>
-      {
-        ...Array(limit).fill(0).map((_, index) => (
-          <Skeleton key={index} className="h-6 mb-4 rounded-[8px]"/>
-        ))
-      }
-      <Skeleton className="w-28 h-6 mb-4 rounded-[8px]"/>
-    </div>
+    return (
+      <div className={className}>
+        <p className="font-bold mb-3">{title}</p>
+        {...Array(limit)
+          .fill(0)
+          .map((_, index) => (
+            <Skeleton key={index} className="h-6 mb-4 rounded-[8px]" />
+          ))}
+        <Skeleton className="w-28 h-6 mb-4 rounded-[8px]" />
+      </div>
+    );
   }
 
   return (
@@ -61,7 +67,8 @@ const CheckboxFiltersGroup: React.FC<Props> = ({
 
       {showAll && (
         <div className="mb-5">
-          <Input onChange={(e) => onChangeSearchInput(e.target.value)}
+          <Input
+            onChange={(e) => onChangeSearchInput(e.target.value)}
             placeholder={searchInputPlaceholder}
             className="bg-gray-50 border-none"
           />
@@ -82,10 +89,13 @@ const CheckboxFiltersGroup: React.FC<Props> = ({
         ))}
       </div>
       {items.length > limit && (
-        <div className={showAll ? 'border-t border-t-neutral-100 mt-4' : ''}>
-            <button onClick={() => setShowAll(!showAll)} className="text-primary mt-3">
-                {showAll ? 'Скрыть' : '+ Показать всё'}
-            </button>
+        <div className={showAll ? "border-t border-t-neutral-100 mt-4" : ""}>
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="text-primary mt-3"
+          >
+            {showAll ? "Скрыть" : "+ Показать всё"}
+          </button>
         </div>
       )}
     </div>

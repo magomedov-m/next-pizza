@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "@/shared/lib/utils";
 import { Container } from "./Container";
 import Image from "next/image";
-import { Button } from "../../components/ui/Index";
+import { Button } from "@/shared/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, ShoppingCart, User } from "lucide-react";
 import SearchInput from "./SearchInputField";

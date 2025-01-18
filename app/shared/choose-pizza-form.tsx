@@ -1,9 +1,9 @@
-import { PizzaImage } from "@/components/ui/PizzaImage";
+import { PizzaImage } from "@/shared/components/ui/PizzaImage";
 import { cn } from "@/shared/lib/utils";
 import { ingredients } from "@/prisma/constants";
 import React from "react";
 import { Title } from "./Title";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/shared/components/ui/button";
 
 interface Props {
   imageUrl: string;

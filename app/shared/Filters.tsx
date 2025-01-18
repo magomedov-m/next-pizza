@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Title } from "./Title";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/shared/components/ui/input";
 import { RangeSlider } from "./RangeSlider";
 import CheckboxFiltersGroup from "./CheckboxFiltersGroup";
 import { useQueryFilters, useIngredients, useFilters } from "@/shared/hooks";
@@ -12,23 +12,26 @@ interface Props {
 }
 
 export const Filters: React.FC<Props> = ({ className }) => {
-  const {ingredients, loading} = useIngredients();
-  const filters = useFilters()
+  const { ingredients, loading } = useIngredients();
+  const filters = useFilters();
 
-  useQueryFilters(filters)
+  useQueryFilters(filters);
 
-  const items = ingredients.map((item) => ({ value: String(item.id), text: item.name }));
+  const items = ingredients.map((item) => ({
+    value: String(item.id),
+    text: item.name,
+  }));
 
   const updatePrices = (prices: number[]) => {
-    filters.setPrices('priceFrom', prices[0])
-    filters.setPrices('priceTo', prices[1])
-  }
+    filters.setPrices("priceFrom", prices[0]);
+    filters.setPrices("priceTo", prices[1]);
+  };
 
   function updatePrice(arg0: string, arg1: number): void {
     throw new Error("Function not implemented.");
   }
 
-  function setPrice(arg0: { priceFrom: number; priceTo: number; }): void {
+  function setPrice(arg0: { priceFrom: number; priceTo: number }): void {
     throw new Error("Function not implemented.");
   }
 
@@ -85,7 +88,10 @@ export const Filters: React.FC<Props> = ({ className }) => {
           min={0}
           max={1000}
           step={10}
-          value={[filters.prices.priceFrom || 0, filters.prices.priceTo || 1000]}
+          value={[
+            filters.prices.priceFrom || 0,
+            filters.prices.priceTo || 1000,
+          ]}
           onValueChange={updatePrices}
         />
       </div>
