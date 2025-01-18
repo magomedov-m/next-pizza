@@ -2,10 +2,10 @@
 
 import React from "react";
 import { Title } from "./Title";
-import { Input } from "@/shared/components/ui/input";
+import { Input } from "@/components/ui/input";
 import { RangeSlider } from "./RangeSlider";
 import CheckboxFiltersGroup from "./CheckboxFiltersGroup";
-import { useQueryFilters, useIngredients, useFilters } from "@/shared/hooks";
+import { useQueryFilters, useIngredients, useFilters } from "@/hooks";
 
 interface Props {
   className?: string;

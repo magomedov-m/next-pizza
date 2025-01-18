@@ -1,7 +1,7 @@
 import { prisma } from "@/prisma/prismaClient";
 import { notFound } from "next/navigation";
 import { Container } from "@/app/shared/Container";
-import { PizzaImage } from "@/shared/components/ui/PizzaImage";
+import { PizzaImage } from "@/components/ui/PizzaImage";
 import { Title } from "@/app/shared/Title";
 import GroupVariants from "@/app/shared/GroupVariants";
 

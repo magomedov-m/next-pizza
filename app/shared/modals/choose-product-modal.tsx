@@ -1,7 +1,7 @@
 "use client";
 
-import { Dialog, DialogContent } from "@/shared/components/ui/dialog";
-import { cn } from "@/shared/lib/utils";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { cn } from "@/lib/utils";
 import { Product } from "@prisma/client";
 import React from "react";
 import { Title } from "../Title";

@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import { FilterCheckboxProps, FilterCheckbox } from "./FilterCheckbox";
-import { Input } from "@/shared/components/ui/input";
-import { Skeleton } from "@/shared/components/ui/skeleton";
+import { Input } from "@/components/ui/input";
+import { Skeleton } from "@/components/ui/skeleton";
 
 type Item = FilterCheckboxProps;
 
