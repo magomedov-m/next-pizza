@@ -4,6 +4,8 @@ import { ingredients } from "@/prisma/constants";
 import React from "react";
 import { Title } from "./Title";
 import { Button } from "@/components/ui/button";
+import GroupVariants from "./GroupVariants";
+import { PizzaSizes } from "@/constants/pizza";
 
 interface Props {
   imageUrl: string;
@@ -33,6 +35,8 @@ const ChoosePizzaForm: React.FC<Props> = ({
         <Title text={name} size="md" className="font-extrabold mb-1" />
 
         <p className="text-gray-400">{textDetails}</p>
+
+        <GroupVariants items={PizzaSizes} />
 
         <Button className="h-[55px] px-10 text-base rounded-[18px] w-full mt-10">
           Добавить в корзину за {totalPrice} ₽
