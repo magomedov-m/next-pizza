@@ -1,11 +1,16 @@
 import { PizzaImage } from "@/components/ui/PizzaImage";
 import { cn } from "@/lib/utils";
 import { ingredients } from "@/prisma/constants";
-import React from "react";
+import React, { useState } from "react";
 import { Title } from "./Title";
 import { Button } from "@/components/ui/button";
 import GroupVariants from "./GroupVariants";
-import { PizzaSizes } from "@/constants/pizza";
+import {
+  PizzaSize,
+  PizzaSizes,
+  PizzaType,
+  PizzaTypes,
+} from "@/constants/pizza";
 
 interface Props {
   imageUrl: string;
@@ -24,9 +29,12 @@ const ChoosePizzaForm: React.FC<Props> = ({
   onClickAdd,
   className,
 }) => {
+  const [size, setSize] = useState<PizzaSize>(20);
+  const [type, setType] = useState<PizzaType>(1);
+
   const textDetails = "30 см, традиционное тесто 30";
   const totalPrice = 350;
-  const size = 30;
+
   return (
     <div className={cn(className, "flex flex-1")}>
       <PizzaImage imageUrl={imageUrl} size={size} />
@@ -36,7 +44,19 @@ const ChoosePizzaForm: React.FC<Props> = ({
 
         <p className="text-gray-400">{textDetails}</p>
 
-        <GroupVariants items={PizzaSizes} />
+        <div className="flex flex-col gap-4 mt-5">
+          <GroupVariants
+            items={PizzaSizes}
+            value={String(size)}
+            onClick={(value) => setSize(Number(value) as PizzaSize)}
+          />
+
+          <GroupVariants
+            items={PizzaTypes}
+            value={String(type)}
+            onClick={(value) => setType(Number(value) as PizzaType)}
+          />
+        </div>
 
         <Button className="h-[55px] px-10 text-base rounded-[18px] w-full mt-10">
           Добавить в корзину за {totalPrice} ₽
