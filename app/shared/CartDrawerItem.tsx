@@ -8,7 +8,7 @@ import { CartItemProps } from "./cart-item-details/cart-item-details.types";
 interface Props extends CartItemProps {
   className?: string;
 }
-
+console.log('hi')
 const CartDrawerItem: React.FC<Props> = ({
   id,
   imageUrl,
