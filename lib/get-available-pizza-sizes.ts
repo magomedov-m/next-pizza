@@ -10,7 +10,7 @@ export const getAvailablePizzaSizes = (
   return PizzaSizes.map((item) => ({
     name: item.name,
     value: item.value,
-    disabled: !filteredPizzasByType?.some(
+    disabled: filteredPizzasByType?.some(
       (pizza) => Number(pizza.size) === Number(item.value)
     ),
   }));

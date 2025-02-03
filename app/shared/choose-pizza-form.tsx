@@ -1,24 +1,17 @@
 "use client";
 import { PizzaImage } from "@/components/ui/PizzaImage";
 import { cn } from "@/lib/utils";
-import { ingredients } from "@/prisma/constants";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Title } from "./Title";
 import { Button } from "@/components/ui/button";
 import GroupVariants from "./GroupVariants";
 import {
   PizzaSize,
-  PizzaSizes,
   PizzaType,
   PizzaTypes,
-  mapPizzaSize,
-  mapPizzaType,
 } from "@/constants/pizza";
 import IngredientItem from "./Ingredient-item";
 import { Ingredient, ProductItem } from "@prisma/client";
-import { useSet } from "react-use";
-import { calcTotalPizzaPrice } from "@/lib/calc-total-pizza-price";
-import { getAvailablePizzaSizes } from "@/lib/get-available-pizza-sizes";
 import { usePizzaOptions } from "@/hooks/use-pizza-options";
 import { getPizzaDetails } from "@/lib/get-pizza-details";
 
