@@ -16,7 +16,7 @@ const IngredientItem: React.FC<Props> = ({ className, imageUrl, name, price, act
     {active && <CircleCheck className="absolute top-2 right-2 text-primary" /> }
     <img width={110} height={110} src={imageUrl} alt="" />
     <span className="text-xs mb-1">{name}</span>
-    <span className="font-bold">{price} Р</span>
+    <span className="font-bold">{price} ₽</span>
   </div>;
 };
 
