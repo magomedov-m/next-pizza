@@ -22,7 +22,11 @@ const CartDrawerItem: React.FC<Props> = ({
       <CartItem.Image src={imageUrl} />
 
       <div className="flex-1">
-        <CartItem.Info />
+        <CartItem.Image src={imageUrl} />
+
+        <div className="flex-1">
+          <CartItem.Info name="" />
+        </div>
       </div>
     </div>
   );
