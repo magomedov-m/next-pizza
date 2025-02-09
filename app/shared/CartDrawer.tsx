@@ -45,7 +45,7 @@ const CartDrawer: React.FC<React.PropsWithChildren<Props>> = ({ children }) => {
                 { name: "Цыпленок" },
                 { name: "моцареллочка" },
               ])}
-              name={"Самая бомбувая пицца жиесть"}
+              name={"Чоризо фреш"}
               price={390}
               quantity={1}
             />
