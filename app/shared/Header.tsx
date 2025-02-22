@@ -1,7 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Container } from "./Container";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { User } from "lucide-react";
@@ -20,7 +19,7 @@ const Header: React.FC<Props> = ({ className }) => {
           {/* Левая часть */}
           <Link href="/">
             <div className="flex items-center gap-4">
-              <Image src="/logo.png" alt="Logo" width={35} height={35} />
+              <img src="/logo.png" alt="Logo" width={35} height={35} />
               <div>
                 <h1 className="text-21xl uppercase font-black">Next Pizza</h1>
                 <p className="text-sm text-gray-400 leading-3">
