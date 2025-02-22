@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,12 +18,24 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import CartDrawerItem from "./CartDrawerItem";
 import { getCartItemsDetails } from "@/lib/get-cart-items-details";
+import { useCartStore } from "@/store/cart";
+import { PizzaSize, PizzaType } from "@/constants/pizza";
 
 interface Props {
   className?: string;
 }
 
 const CartDrawer: React.FC<React.PropsWithChildren<Props>> = ({ children }) => {
+  // const [totalAmount, fetchCartItems, items] = useCartStore((state) => [
+  //   state.totalAmount,
+  //   state.fetchCartItems,
+  //   state.items,
+  // ]);
+
+  // useEffect(() => {
+  //   fetchCartItems();
+  // }, []);
+
   return (
     <Sheet>
       <SheetTrigger asChild>{children}</SheetTrigger>
@@ -36,19 +48,19 @@ const CartDrawer: React.FC<React.PropsWithChildren<Props>> = ({ children }) => {
 
         <div className="-mx-6 mt-5 overflow-auto scrollbar flex-1">
           <div className="mb-2">
-            <CartDrawerItem
-              id={0}
-              imageUrl={
-                "https://media.dodostatic.net/image/r:584x584/11EF61FBB31CB08D95A03574FE87A3B0.avif"
-              }
-              details={getCartItemsDetails(2, 30, [
-                { name: "Цыпленок" },
-                { name: "моцареллочка" },
-              ])}
-              name={"Чоризо фреш"}
-              price={390}
-              quantity={1}
-            />
+            {/* {items.map((item) => (
+              <CartDrawerItem
+              key={item.id}
+                id={item.id}
+                imageUrl={
+                  item.imageUrl
+                }
+                details={item.pizzaSize && item.pizzaType ? getCartItemsDetails(item.ingredients, item.pizzaType as PizzaType, item.pizzaSize as PizzaSize) : ''}
+                name={item.name}
+                price={item.price}
+                quantity={item.quantity}
+              />
+            ))} */}
           </div>
         </div>
 

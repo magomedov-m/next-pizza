@@ -7,7 +7,7 @@ interface Props {
   className?: string;
 }
 
-const cartButton: React.FC<Props> = ({ className }) => {
+const cartButton: React.FC<Props> = ({}) => {
   return (
     <CartDrawer>
       <Button className="group relative">

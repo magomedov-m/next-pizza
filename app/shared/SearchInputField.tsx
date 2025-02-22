@@ -7,6 +7,7 @@ import { useClickAway, useDebounce } from "react-use";
 import Link from "next/link";
 import { Api } from "@/sevices/api-client";
 import { Product } from "@prisma/client";
+import Image from "next/image";
 
 interface Props {
   className?: string;
@@ -81,7 +82,7 @@ const SearchInputField: React.FC<Props> = ({ className }) => {
                 className="flex items-center gap-3 w-full px-3 py-2 hover:bg-primary/10"
                 href={`/product/${product.id}`}
               >
-                <img
+                <Image
                   className="rounded-sm h-8 w-8"
                   src={product.imageUrl}
                   alt={product.name}
