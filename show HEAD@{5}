@@ -1,0 +1,88 @@
+[33mc33da6b[m[33m ([m[1;36mHEAD[m[33m)[m HEAD@{0}: checkout: moving from 59aee0a22d2a4950c1ee4f82548ee013d0a7fde4 to c33da6be6a5751631d5676a31c8e64279af3766d
+[33m59aee0a[m HEAD@{1}: commit: .
+[33mc33da6b[m[33m ([m[1;36mHEAD[m[33m)[m HEAD@{2}: checkout: moving from 034a8dffc1dd5129c204610448c8ff9862e8a3df to c33da6be6a5751631d5676a31c8e64279af3766d
+[33m034a8df[m HEAD@{3}: checkout: moving from basket to 034a8dffc1dd5129c204610448c8ff9862e8a3df
+[33m7c17498[m[33m ([m[1;31morigin/basket[m[33m, [m[1;32mbasket[m[33m)[m HEAD@{4}: checkout: moving from main to basket
+[33mb7f50a9[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{5}: checkout: moving from basket to main
+[33m7c17498[m[33m ([m[1;31morigin/basket[m[33m, [m[1;32mbasket[m[33m)[m HEAD@{6}: commit: .
+[33mea096ba[m HEAD@{7}: commit: .
+[33m034a8df[m HEAD@{8}: reset: moving to 034a8dffc1dd5129c204610448c8ff9862e8a3df
+[33m676c638[m HEAD@{9}: reset: moving to 676c6384245c215d2cc86a7fb252004b8ece428d
+[33m3305ebe[m HEAD@{10}: commit: .
+[33m676c638[m HEAD@{11}: commit: .
+[33m034a8df[m HEAD@{12}: checkout: moving from main to basket
+[33mb7f50a9[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{13}: commit: .
+[33m4427fcb[m HEAD@{14}: checkout: moving from basket to main
+[33m034a8df[m HEAD@{15}: commit: Типизирую ответ, возвращаемый сервером для корзины
+[33m29be27f[m HEAD@{16}: merge main: Merge made by the 'ort' strategy.
+[33m266988d[m HEAD@{17}: checkout: moving from main to basket
+[33m4427fcb[m HEAD@{18}: checkout: moving from basket to main
+[33m266988d[m HEAD@{19}: commit: basket
+[33maf726e3[m HEAD@{20}: commit: .
+[33mb29e760[m HEAD@{21}: merge main: Merge made by the 'ort' strategy.
+[33md0cdba7[m HEAD@{22}: checkout: moving from main to basket
+[33m517e431[m HEAD@{23}: checkout: moving from basket to main
+[33md0cdba7[m HEAD@{24}: commit: basket
+[33m2c9a8eb[m HEAD@{25}: merge main: Merge made by the 'ort' strategy.
+[33m3b074d6[m HEAD@{26}: checkout: moving from main to basket
+[33m0dd935b[m HEAD@{27}: checkout: moving from basket to main
+[33m3b074d6[m HEAD@{28}: commit: basket
+[33m439d66e[m HEAD@{29}: checkout: moving from basket to basket
+[33m439d66e[m HEAD@{30}: checkout: moving from basket to basket
+[33m439d66e[m HEAD@{31}: commit: создал тестовый конфликт
+[33md5741bc[m HEAD@{32}: checkout: moving from basket to basket
+[33md5741bc[m HEAD@{33}: checkout: moving from basket to basket
+[33md5741bc[m HEAD@{34}: checkout: moving from main to basket
+[33mc9a8a55[m HEAD@{35}: checkout: moving from basket to main
+[33md5741bc[m HEAD@{36}: checkout: moving from basket to basket
+[33md5741bc[m HEAD@{37}: commit: .
+[33mc9a8a55[m HEAD@{38}: checkout: moving from basket to basket
+[33mc9a8a55[m HEAD@{39}: checkout: moving from main to basket
+[33mc9a8a55[m HEAD@{40}: commit: .
+[33mc33da6b[m[33m ([m[1;36mHEAD[m[33m)[m HEAD@{41}: commit: Сделал новые компоненты и хук для более "чистого" кода
+[33m55094a3[m HEAD@{42}: commit: .
+[33m9b0c871[m HEAD@{43}: commit: .
+[33m3728a95[m HEAD@{44}: commit: .
+[33m1cff2f0[m HEAD@{45}: commit: сделал отображение ингредиентов в карточке пиццы
+[33m4d64942[m HEAD@{46}: commit: Доработал модальное окно
+[33m73e6298[m HEAD@{47}: commit: .
+[33ma012c0d[m HEAD@{48}: commit: .
+[33mc84a5e6[m HEAD@{49}: commit: .
+[33m93ed6c7[m HEAD@{50}: commit: .
+[33mbdeb0aa[m HEAD@{51}: commit: Пытался объединить файлы в shared
+[33m3326261[m HEAD@{52}: commit: .
+[33m550f1cc[m HEAD@{53}: commit: .
+[33m7ebf3fb[m HEAD@{54}: commit: .
+[33m27a3ef3[m HEAD@{55}: commit: .
+[33m0f42c0a[m HEAD@{56}: commit: Создал параллельный роутинг
+[33m411756e[m HEAD@{57}: commit: сделал посадочную страницу
+[33mf26f294[m HEAD@{58}: commit: создал посадучную страницу
+[33m27d7a0b[m HEAD@{59}: commit: Update page.tsx
+[33mf5d2427[m HEAD@{60}: commit: создал компонент для отображения по продуктам
+[33m9e52fa5[m HEAD@{61}: commit: начал создавать новый компонент для отображения товаров
+[33ma85d7d6[m HEAD@{62}: commit: добавил функционал отображения категорий по наличию продукта
+[33mc0b6d92[m HEAD@{63}: commit: добавил отображение реальных данных с бекенда
+[33mddb49b8[m HEAD@{64}: commit: исправил синтаксическую ошибку
+[33ma7253b6[m HEAD@{65}: commit: исправил баг с ценником
+[33m95a315a[m HEAD@{66}: commit: .
+[33m40fa3f3[m HEAD@{67}: commit: Подправил остатки ошибок из-за создания хуков
+[33mfb77923[m HEAD@{68}: commit: создал дополнительные хуки, разбив компонент
+[33m821d624[m HEAD@{69}: commit: .
+[33m5daedc4[m HEAD@{70}: commit: При обновлении страницы useState не обновляется (это хорошо)
+[33m186e1b5[m HEAD@{71}: commit: доработал фильтрацию: цен, видов пицц
+[33m7d1437f[m HEAD@{72}: commit: Сделал фильтрацию по цене
+[33m1664585[m HEAD@{73}: commit: Сделал отображение выбранных категорий
+[33mf1136fe[m HEAD@{74}: commit: сделал loading для ингредиентов
+[33mdf34e94[m HEAD@{75}: commit: .
+[33m770328d[m HEAD@{76}: commit: удалил лишние console.log()
+[33m7851bca[m HEAD@{77}: commit: исправил ошибку из-за которой не возвращались данные
+[33m57eb168[m HEAD@{78}: commit: отлов ошибок try/catch
+[33md0559bd[m HEAD@{79}: commit: Пытался настроить подключение к серверу
+[33m3123f37[m HEAD@{80}: commit: Создал запрос к API
+[33m0f8e4ff[m HEAD@{81}: commit: создал drop-down
+[33m8390590[m HEAD@{82}: commit: .
+[33m2f3af09[m HEAD@{83}: commit: Создал локальный поиск по названию пиццы
+[33mb4a391c[m HEAD@{84}: commit: Создал корзины пользователей
+[33m4c0c084[m HEAD@{85}: commit: Настроил получение продуктов в prisma studio
+[33m48d7178[m HEAD@{86}: commit: .
+[33m6eb09a7[m HEAD@{87}: commit: .
