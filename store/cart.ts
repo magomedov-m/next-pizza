@@ -1,7 +1,19 @@
-import { CartStateItem, getCartDetails } from "@/lib/get-cart-details";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { getCartDetails } from "@/lib/get-cart-details";
 import { Api } from "@/sevices/api-client";
 import { create } from "zustand";
 
+export type CartStateItem = {
+    id: number;
+    quantity: number;
+    name: string;
+    imageUrl: string;
+    price: number;
+    pizzaSize?: number | null;
+    type?: number | null;
+    ingredients: Array<{ name: string; price: number }>;
+}
 
 export interface CartState {
     loading: boolean;
