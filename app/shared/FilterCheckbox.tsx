@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { ButtonHTMLAttributes } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 

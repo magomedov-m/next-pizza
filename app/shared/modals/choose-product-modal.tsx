@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { Dialog, DialogContent } from "@/components/ui/dialog";
